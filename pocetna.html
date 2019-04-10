@@ -15,15 +15,18 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css'
+        integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+    <!--za ikonice-->
     <title>Miloš Sofronijević</title>
     <style>
         body {
             margin: 0px;
-
         }
 
         header {
             background-image: url('suma.jpg');
+            background-color: silver;
             height: 100vh;
             background-position: center;
             background-repeat: no-repeat;
@@ -36,15 +39,14 @@
             border: 2px solid silver;
         }
 
-        h1 {
+        #okvir h1 {
             font-size: 60px;
             font-weight: bold;
             opacity: 0.8;
             text-shadow: -1px 0 grey, 0 1px grey, 1px 0 grey, 0 -1px grey;
-
         }
 
-        p {
+        #okvir h2 {
             font-size: 25px;
             opacity: 0.8;
 
@@ -54,45 +56,281 @@
             opacity: 0.8;
         }
 
-        .sadrzaj {
-            width: fit-content;
-            padding: 20px;
+        .strelica {
+            position: absolute;
+            border: solid silver;
+            border-width: 0 5px 5px 0;
+            padding: 10px;
+            transform: rotate(45deg);
+            bottom: 60px;
+            animation: strelica 1s ease-out infinite;
+        }
+
+        @keyframes strelica {
+            0%% {
+                bottom: 60px;
+                opacity: 1;
+            }
+
+            70% {
+                opacity: 0.6;
+            }
+
+            100% {
+                bottom: 10px;
+                opacity: 0;
+            }
+
+        }
+
+        #omeni {
+            background-color: #f2f2f2;
+        }
+
+        .table td {
+            border-bottom: 1px solid #dee2e6;
+
+        }
+
+        td:first-child {
+            width: 20%;
+            margin: 0px;
+
+        }
+
+        td:nth-child(2) {
+            vertical-align: middle;
+        }
+
+        tr p {
+            margin: 0;
+            padding: 0.5rem;
+        }
+
+        /*Da okrenem animaciju progress-a na drugu stranu*/
+        @keyframes progress-bar-stripes {
+            from {
+                background-position: 0 1rem;
+            }
+
+            to {
+                background-position: 0 0;
+            }
+        }
+
+        #projekti img {
+            transition: transform .5s;
+
+            width: 100%;
+        }
+
+        #projekti .row>div:hover {
+            transform: scale(1.05);
+
+
+        }
+
+        #projekti img+div {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background-color: grey;
+            color: white;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        #kontakt {
+            background-color: #f2f2f2;
+        }
+
+        #kontakt span {
+            font-size: 30px !important;
+        }
+
+        #kontakt p {
+            font-size: 18px;
         }
     </style>
 </head>
 
 <body>
+
+    <!---        HEADER        -->
+
+
     <header class="container-fluid text-center d-flex flex-column align-items-center justify-content-center">
         <div id="okvir" class="p-sm-4 p-1">
             <h1 class="text-light">Miloš Sofronijević</h1>
-            <p class="text-light">Budući web developer</p>
+            <h2 class="text-light">Budući web developer</h2>
         </div>
 
         <div id="dugmici" class="container justify-content-center mt-4 d-flex flex-wrap">
-            <a href="#" class="btn btn-secondary m-3">O meni</a>
-            <a href="#" class="btn btn-secondary m-3">Projekti</a>
-            <a href="#" class="btn btn-secondary m-3">Kontakt</a>
+            <a href="#omeni" class="btn btn-secondary m-3 ">O meni</a>
+            <a href="#projekti" class="btn btn-secondary m-3">Projekti</a>
+            <a href="#kontakt" class="btn btn-secondary m-3">Kontakt</a>
         </div>
+
+        <i class="strelica"></i>
     </header>
 
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam ad impedit accusantium aspernatur laborum rerum
-        fuga cum neque facilis velit officiis, reprehenderit temporibus molestias ut voluptatum itaque minus. Eaque,
-        ratione!</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam ad impedit accusantium aspernatur laborum rerum
-        fuga cum neque facilis velit officiis, reprehenderit temporibus molestias ut voluptatum itaque minus. Eaque,
-        ratione!</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam ad impedit accusantium aspernatur laborum rerum
-        fuga cum neque facilis velit officiis, reprehenderit temporibus molestias ut voluptatum itaque minus. Eaque,
-        ratione!</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam ad impedit accusantium aspernatur laborum rerum
-        fuga cum neque facilis velit officiis, reprehenderit temporibus molestias ut voluptatum itaque minus. Eaque,
-        ratione!</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam ad impedit accusantium aspernatur laborum rerum
-        fuga cum neque facilis velit officiis, reprehenderit temporibus molestias ut voluptatum itaque minus. Eaque,
-        ratione!</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam ad impedit accusantium aspernatur laborum rerum
-        fuga cum neque facilis velit officiis, reprehenderit temporibus molestias ut voluptatum itaque minus. Eaque,
-        ratione!</p>
+    <main>
+
+        <!--          O MENI               -->
+
+
+        <div id="omeni" class="container-fluid  px-5 py-3">
+            <div class="row">
+                <div class="col-lg-6 my-4">
+                    <h1 class="text-center mb-3">O meni</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere culpa impedit, provident dolores
+                        enim asperiores neque non pariatur cumque aperiam eius, fuga nesciunt dolor maxime natus modi,
+                        praesentium maiores sunt.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium cupiditate nihil velit
+                        laborum magni architecto doloremque omnis ducimus fuga rerum, iure laboriosam deserunt quidem
+                        consectetur harum, pariatur ex suscipit ad.</p>
+                </div>
+                <div class="col-lg-6 my-4">
+                    <h1 class="text-center mb-3">Veštine</h1>
+                    <table class="table table-sm  ">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <p>HTML</p>
+                                </td>
+                                <td>
+                                    <div class="progress ">
+                                        <div style="width: 80%;"
+                                            class="progress-bar bg-danger progress-bar-striped progress-bar-animated">
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>CSS</p>
+                                </td>
+                                <td>
+                                    <div class="progress">
+                                        <div style="width: 65%;"
+                                            class="progress-bar progress-bar-striped progress-bar-animated">
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>Bootstrap4</p>
+                                </td>
+                                <td class="">
+                                    <div class="progress">
+                                        <div style="width: 48%; background-color: #61408F"
+                                            class="progress-bar progress-bar-striped progress-bar-animated">
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>Javascript</p>
+                                </td>
+                                <td>
+                                    <div class="progress">
+                                        <div style="width: 3%;"
+                                            class="progress-bar progress-bar-striped bg-warning progress-bar-animated ">
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>PHP</p>
+                                </td>
+                                <td>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-striped progress-bar-animated "></div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
+        <!--          PROJEKTI               -->
+
+
+        <div id="projekti" class="container px-5 py-3">
+            <h1 class="text-center mt-3">Projekti</h1>
+            <div class="row ">
+                <div style="position: relative;" class="col-xl-4 col-lg-6 my-3">
+                    <img src="./Dodaci/lager.jpg" alt="" class="img-thumbnail">
+                    <div>Lager lista - aplikacija</div>
+                </div>
+                <div class="col-xl-4 col-lg-6 my-3">
+                    <img src="./Dodaci/lista.jpg" alt="" class="img-thumbnail">
+                    <div>Lista potrazivanja - aplikacija</div>
+                </div>
+                <div class="col-xl-4  col-lg-6  my-3">
+                    <img src="./Dodaci/BECO_Webshop_-_Shopping_XXXLMobile43.jpg" alt="" class="img-thumbnail">
+                    <div>Web shop</div>
+                </div>
+                <div class="col-xl-4 col-lg-6 my-3">
+                    <img src="./Dodaci/responsive (2).jpg" alt="" class="img-thumbnail">
+                    <div>Responzivni sajt</div>
+                </div>
+                <div class="col-xl-4 col-lg-6 my-3">
+                    <img src="./Dodaci/muzika.jpg" alt="" class="img-thumbnail">
+                    <div>Muzicki sajt</div>
+                </div>
+                <div class="col-xl-4  col-lg-6  my-3">
+                    <img src="./Dodaci/igra2.jpg" alt="" class="img-thumbnail">
+                    <div>Igra</div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer id="kontakt" class="container-fluid">
+        <h1 class="text-center pt-5">Kontakt</h1>
+        <div class="container text-center ">
+            <div class="row">
+                <div class="col-md-6 my-3">
+                    <span class="fas fa-envelope"></span>
+                    <p>sofronijev@gmail.com</p>
+                </div>
+                <div class="col-md-6 my-3">
+                    <span class="fas fa-mobile-alt"></span>
+                    <p>+381 63 218926</p>
+                </div>
+            </div>
+            <div class="form-row pb-4">
+                <div class="form-group col-lg-6">
+                    <input class="form-control" type="text" placeholder="Ime" required>
+                </div>
+                <div class="form-group col-lg-6">
+                    <input class="form-control" type="email" placeholder="Email" required>
+                </div>
+                <div class="form-group col-12">
+                    <textarea class="form-control" name="poruka" id="poruka" placeholder="Poruka..."
+                        rows="5"></textarea>
+                </div>
+                <button type="submit" class="btn btn-success offset-4 col-4">Pošalji poruku</button>
+
+            </div>
+        </div>
+
+        <div class="text-center">
+            <a href="https://www.facebook.com/milos.sofronijevic" target="_blank"><img src="./facebook.svg"
+                    alt="facebook" style="width: 36px" class="mx-3 mb-3"></a>
+            <a href="https://github.com/Sofronijev" target="_blank"><img src="./github.svg" alt="Github"
+                    style="width: 36px" class="mx-3 mb-3"></a>
+        </div>
+
+    </footer>
 
 
 </body>
