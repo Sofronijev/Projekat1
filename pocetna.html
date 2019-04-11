@@ -25,7 +25,7 @@
         }
 
         header {
-            background-image: url('suma.jpg');
+            background-image: url('slike/suma.jpg');
             background-color: silver;
             height: 100vh;
             background-position: center;
@@ -36,7 +36,8 @@
         }
 
         #okvir {
-            border: 2px solid silver;
+            border: 3px solid silver;
+            border-radius: 15px;
         }
 
         #okvir h1 {
@@ -45,6 +46,12 @@
             opacity: 0.8;
             text-shadow: -1px 0 grey, 0 1px grey, 1px 0 grey, 0 -1px grey;
         }
+        h1{
+            font-size: 50px;
+        }
+        p{
+            font-size: 20px;
+        }
 
         #okvir h2 {
             font-size: 25px;
@@ -52,10 +59,13 @@
 
         }
 
-        #dugmici {
+        #dugmici a{            
+            border-radius: 20px;
+            font-size: 20px;
             opacity: 0.8;
+           
         }
-
+       
         .strelica {
             position: absolute;
             border: solid silver;
@@ -63,11 +73,11 @@
             padding: 10px;
             transform: rotate(45deg);
             bottom: 60px;
-            animation: strelica 1s ease-out infinite;
+            animation: strelica 0.9s ease-out infinite;
         }
 
         @keyframes strelica {
-            0%% {
+            0% {
                 bottom: 60px;
                 opacity: 1;
             }
@@ -145,7 +155,7 @@
         }
 
         #kontakt span {
-            font-size: 30px !important;
+            font-size: 30px;
         }
 
         #kontakt p {
@@ -166,9 +176,9 @@
         </div>
 
         <div id="dugmici" class="container justify-content-center mt-4 d-flex flex-wrap">
-            <a href="#omeni" class="btn btn-secondary m-3 ">O meni</a>
-            <a href="#projekti" class="btn btn-secondary m-3">Projekti</a>
-            <a href="#kontakt" class="btn btn-secondary m-3">Kontakt</a>
+            <a href="#omeni" class="btn btn-secondary m-3 px-4">O meni</a>
+            <a href="#projekti" class="btn btn-secondary m-3 px-4">Projekti</a>
+            <a href="#kontakt" class="btn btn-secondary m-3 px-4">Kontakt</a>
         </div>
 
         <i class="strelica"></i>
@@ -262,31 +272,31 @@
         <!--          PROJEKTI               -->
 
 
-        <div id="projekti" class="container px-5 py-3">
+        <div id="projekti" class="container py-3">
             <h1 class="text-center mt-3">Projekti</h1>
             <div class="row ">
-                <div style="position: relative;" class="col-xl-4 col-lg-6 my-3">
-                    <img src="./Dodaci/lager.jpg" alt="" class="img-thumbnail">
+                <div style="position: relative;" class="col-xl-4 col-md-6 my-3">
+                    <img src="./slike/lager.jpg" alt="" class="img-thumbnail">
                     <div>Lager lista - aplikacija</div>
                 </div>
-                <div class="col-xl-4 col-lg-6 my-3">
-                    <img src="./Dodaci/lista.jpg" alt="" class="img-thumbnail">
+                <div class="col-xl-4 col-md-6 my-3">
+                    <img src="./slike/lista.jpg" alt="" class="img-thumbnail">
                     <div>Lista potrazivanja - aplikacija</div>
                 </div>
-                <div class="col-xl-4  col-lg-6  my-3">
-                    <img src="./Dodaci/BECO_Webshop_-_Shopping_XXXLMobile43.jpg" alt="" class="img-thumbnail">
-                    <div>Web shop</div>
+                <div class="col-xl-4  col-md-6  my-3">
+                    <img src="./slike/webshop.jpg" alt="" class="img-thumbnail">
+                    <div>Webshop</div>
                 </div>
-                <div class="col-xl-4 col-lg-6 my-3">
-                    <img src="./Dodaci/responsive (2).jpg" alt="" class="img-thumbnail">
+                <div class="col-xl-4 col-md-6 my-3">
+                    <img src="./slike/sajt.jpg" alt="" class="img-thumbnail">
                     <div>Responzivni sajt</div>
                 </div>
-                <div class="col-xl-4 col-lg-6 my-3">
-                    <img src="./Dodaci/muzika.jpg" alt="" class="img-thumbnail">
+                <div class="col-xl-4 col-md-6 my-3">
+                    <img src="./slike/muzika.jpg" alt="" class="img-thumbnail">
                     <div>Muzicki sajt</div>
                 </div>
-                <div class="col-xl-4  col-lg-6  my-3">
-                    <img src="./Dodaci/igra2.jpg" alt="" class="img-thumbnail">
+                <div class="col-xl-4  col-md-6  my-3">
+                    <img src="./slike/igra.jpg" alt="" class="img-thumbnail">
                     <div>Igra</div>
                 </div>
             </div>
