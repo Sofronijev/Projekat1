@@ -24,14 +24,16 @@
             margin: 0px;
         }
 
-        #linkovi a{
+        #linkovi a {
             font-size: 20px;
             color: silver;
-            
+
         }
-        #linkovi a:hover{
+
+        #linkovi a:hover {
             color: grey;
         }
+
         header {
             background-image: url('slike/suma.jpg');
             background-color: silver;
@@ -55,12 +57,14 @@
             text-shadow: -1px 0 grey, 0 1px grey, 1px 0 grey, 0 -1px grey;
         }
 
+
+
         h1 {
             font-size: 50px;
         }
 
         p {
-            font-size: 20px;
+            font-size: 18px;
         }
 
         #okvir h2 {
@@ -74,6 +78,22 @@
             font-size: 20px;
             opacity: 0.8;
 
+        }
+
+        /*kada je uzi ekran slova u naslovu ce biti manja*/
+
+        @media screen and (max-width: 768px) {
+            #okvir h1 {
+                font-size: 50px;
+            }
+
+            #okvir h2 {
+                font-size: 20px;
+            }
+
+            #dugmici a {
+                font-size: 17px;
+            }
         }
 
         .strelica {
@@ -107,24 +127,32 @@
             background-color: #f2f2f2;
         }
 
-        .table td {
+        #omeni h1~p::first-letter {
+            font-size: 30px;
+        }
+
+        #vestine p {
+            font-weight: bold;
+        }
+
+        #vestine .table td {
             border-bottom: 1px solid #dee2e6;
 
         }
 
-        td:first-child {
+        #vestine td:first-child {
             width: 20%;
             margin: 0px;
 
         }
 
-        td:nth-child(2) {
+        #vestine td:nth-child(2) {
             vertical-align: middle;
         }
 
-        tr p {
+        #vestine tr p {
             margin: 0;
-            padding: 0.5rem;
+            padding: 16px;
         }
 
         /*Da okrenem animaciju progress-a na drugu stranu*/
@@ -136,6 +164,12 @@
             to {
                 background-position: 0 0;
             }
+        }
+        /*Da se zaobli progress bar*/
+        .progress,
+        .progress-bar {
+            border-radius: 10px;
+            height: 18px;
         }
 
         #projekti img {
@@ -207,17 +241,17 @@
     <!---        HEADER        -->
 
 
-    <header class="container-fluid text-center d-flex flex-column align-items-center justify-content-center"
+    <header class="container-fluid text-center d-flex flex-column align-items-center justify-content-center mt-2"
         id="header">
-        <div id="okvir" class="p-sm-4 p-1">
+        <div id="okvir" class="p-sm-4 p-2">
             <h1 class="text-light">Miloš Sofronijević</h1>
             <h2 class="text-light">Budući web developer</h2>
         </div>
 
-        <div id="dugmici" class="container justify-content-center mt-4 d-flex flex-wrap">
-            <a href="#omeni" class="btn btn-secondary m-3 px-4">O meni</a>
-            <a href="#projekti" class="btn btn-secondary m-3 px-4">Projekti</a>
-            <a href="#kontakt" class="btn btn-secondary m-3 px-4">Kontakt</a>
+        <div id="dugmici" class="container justify-content-center mt-3 d-flex flex-wrap">
+            <a href="#omeni" class="btn btn-secondary my-1 mx-3 px-4">O meni</a>
+            <a href="#projekti" class="btn btn-secondary my-1 mx-3 px-4">Projekti</a>
+            <a href="#kontakt" class="btn btn-secondary my-1 mx-3 px-4">Kontakt</a>
         </div>
 
         <i class="strelica"></i>
@@ -232,14 +266,19 @@
             <div class="row">
                 <div class="col-lg-6 my-4">
                     <h1 class="text-center mb-3">O meni</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere culpa impedit, provident dolores
-                        enim asperiores neque non pariatur cumque aperiam eius, fuga nesciunt dolor maxime natus modi,
-                        praesentium maiores sunt.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium cupiditate nihil velit
-                        laborum magni architecto doloremque omnis ducimus fuga rerum, iure laboriosam deserunt quidem
-                        consectetur harum, pariatur ex suscipit ad.</p>
+                    <p>Ćao, ja sam Miloš Sofronijević, web developer u pokušaju! U februaru 2019. godine započeo sam
+                        obuku na <a href="http://itobuka.matf.bg.ac.rs/">Matematičkom fakultetu</a> koja je deo <a
+                            href="https://itobuke.rs/rs/">prekvalifikacija za IT</a> koju sprovodi Kancelarija za
+                        infomacione tehnologije i elektronsku Upravu u saradnji sa programom Ujedinjenih nacija za
+                        razvoj (UNDP). </p>
+                    <p>Završio sam Beogradsku poslovnu školu - visoka škola strukovnih studija, smer porezi i carine, a
+                        nakon osnovnih studija završio sam i specijalističke strukovne studije na studijskom programu
+                        menadžment računovodstva, kontola i revizija. </p>
+                    <p>Napravio sam ovaj sajt kao projekat koji treba da pokaže moje do sada stečene veštine na obuci i
+                        da kroz kasnije nove projekte i saznanja naraste do portfolija koji može predstaviti
+                        reprezentativno sve moje stečene veštine</p>
                 </div>
-                <div class="col-lg-6 my-4">
+                <div class="col-lg-6 my-4" id="vestine">
                     <h1 class="text-center mb-3">Veštine</h1>
                     <table class="table table-sm  ">
                         <tbody>
@@ -248,7 +287,7 @@
                                     <p>HTML</p>
                                 </td>
                                 <td>
-                                    <div class="progress ">
+                                    <div class="progress">
                                         <div style="width: 80%;"
                                             class="progress-bar bg-danger progress-bar-striped progress-bar-animated">
                                         </div>
