@@ -1,6 +1,3 @@
-body {
-    margin: 0px;
-}
 
 #linkovi a {
     font-size: 20px;
@@ -33,9 +30,7 @@ header {
     text-shadow: -1px 0 grey, 0 1px grey, 1px 0 grey, 0 -1px grey;
 }
 
-
-
-h1 {
+h2 {
     font-size: 50px;
 }
 
@@ -52,6 +47,7 @@ p {
     border-radius: 20px;
     font-size: 20px;
     opacity: 0.8;
+    font-weight: 500;
 }
 
 /*kada je uzi ekran slova u naslovu ce biti manja*/
@@ -101,18 +97,24 @@ p {
     background-color: #f2f2f2;
 }
 
-#omeni h1~p::first-letter {
+#omeni h2~p{
+    text-align: justify;
+}
+
+#omeni h2~p::first-letter {
     font-size: 30px;
     font-weight: 500;
 }
-
-#vestine p {
-    font-weight: bold;
+#omeni a:link, #omeni a:visited{
+    color: black;
+    text-decoration: underline;
+}
+#omeni a:hover{
+    color: grey;
 }
 
 #vestine .table td {
     border-bottom: 1px solid #dee2e6;
-
 }
 
 #vestine td:first-child {
@@ -126,7 +128,8 @@ p {
 
 #vestine tr p {
     margin: 0;
-    padding: 16px;
+    padding: 10px;
+    font-weight: bold;
 }
 
 /*Da okrenem animaciju progress-a na drugu stranu*/
